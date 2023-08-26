@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Shapes and Colors</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             height: 100vh;
+    
+        }
+        
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .shape {
+            position: absolute;
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        .triangle {
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid white;
+        }
+
+        .right_angle_triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid white;
+            border-bottom: 50px solid transparent;
+        }
+
+        .shape.active {
+            display: block;
+        }
+
+        .buttons{
+            display: flex;
+            flex-direction: column;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="circle">
+        <div class="shape triangle"></div>
+        <div class="shape right_angle_triangle"></div>
+    </div>
+    
+    <div class="buttons">
+    <button id="colorButton">Change Color</button>
+    <button id="shapeButton">Change Shape</button>
+</div>
+ <script src="circle.js"></script>
+
+    
+</body>
+</html>
